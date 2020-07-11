@@ -10,20 +10,22 @@ UserMovieRatings = {
 'Ernie': {'Apocalypto':3, 'Braveheart':8, 'Rebecca':1, 'Star Trek':7}, 'Fiona': {'The Ice Storm':3, 'Family Plot':10, 'Rebecca':6, 'Spellbound':10}}
 
 You can build a simple User-Based Recommendation System as follows:
-• Let’s say you want to make recommendations for UserX
-• Given a UserX, you can find the most similar user or the “nearest neighbor” of UserX by calculating the manhattan distance between UserX and every other user (not including UserX).
-• The person with the smallest manhattan distance is considered the most similar user. Let’s call this person UserXNN.
-• You can now find recommendations for UserX by considering all the movies that UserXNN has rated but that UserX has not.
+Let’s say you want to make recommendations for UserX
+Given a UserX, you can find the most similar user or the “nearest neighbor” of UserX by calculating the manhattan distance between UserX and every other user (not including UserX).
+The person with the smallest manhattan distance is considered the most similar user. Let’s call this person UserXNN.
+You can now find recommendations for UserX by considering all the movies that UserXNN has rated but that UserX has not.
 You have been provided with a framework for this MiniProject: “MiniProject – Framework.py”.
-• The Framework defines a function called manhattanD which takes two rating dictionaries ratings1D and ratings2D as parameters and returns the Manhattan Distance between the two dictionaries.
-• Pseudo-code has been provided to you in the framework. So, you essentially need to plug in appropriate code for steps 1 through 5 in the framework.
+The Framework defines a function called manhattanD which takes two rating dictionaries ratings1D and ratings2D as parameters and returns the Manhattan Distance between the two dictionaries.
+Pseudo-code has been provided to you in the framework. So, you essentially need to plug in appropriate code for steps 1 through 5 in the framework.
+
 Hints:
-• You can use the last exercise in ExerciseSet7 as a starting point for the mini project.
-• The next page provides intermediate and final answers for each user. You can use this to check your work.
+You can use the last exercise in ExerciseSet7 as a starting point for the mini project.
+The next page provides intermediate and final answers for each user. You can use this to check your work.
+
 Some things to keep in mind as you code:
-• Make your code readable – for instance, use meaningful variable names and comments.
-• Make your code elegant – for instance, balance the number of variables you introduce – too many or too few make your code difficult to debug, read, and maintain.
-• Make your output readable and user-friendly
+Make your code readable – for instance, use meaningful variable names and comments.
+Make your code elegant – for instance, balance the number of variables you introduce – too many or too few make your code difficult to debug, read, and maintain.
+Make your output readable and user-friendly
 
 Original data (that has been provided to you as a nested dictionary above):
 6 users have rated 8 different movies on a scale of 1 to 10.
