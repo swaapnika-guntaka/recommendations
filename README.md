@@ -1,14 +1,14 @@
 # recommendations
-simple movie recommendation system
-
-1
 Mini-Project: User-Based Recommendation System
+
 Let’s say we have 6 users, and they have rated 8 different movies on a scale of 1 to 10. Note that not all users have rated all movies.
+
 UserMovieRatings = {
 'Amy': {'Family Plot':10, 'Rebecca':5, 'Spellbound':9, 'Star Trek':6},
 'Bill': {'Apocalypto':8, 'Braveheart':3, 'Rebecca':10, 'Spellbound':5, 'Star Trek':7},
 'Cathy': {'Spaceballs':7, 'The Ice Storm':4, 'Family Plot':5, 'Rebecca':9, 'Spellbound':1}, 'Dave': {'Braveheart':5, 'Rebecca':7, 'Spellbound':4},
 'Ernie': {'Apocalypto':3, 'Braveheart':8, 'Rebecca':1, 'Star Trek':7}, 'Fiona': {'The Ice Storm':3, 'Family Plot':10, 'Rebecca':6, 'Spellbound':10}}
+
 You can build a simple User-Based Recommendation System as follows:
 • Let’s say you want to make recommendations for UserX
 • Given a UserX, you can find the most similar user or the “nearest neighbor” of UserX by calculating the manhattan distance between UserX and every other user (not including UserX).
@@ -24,13 +24,15 @@ Some things to keep in mind as you code:
 • Make your code readable – for instance, use meaningful variable names and comments.
 • Make your code elegant – for instance, balance the number of variables you introduce – too many or too few make your code difficult to debug, read, and maintain.
 • Make your output readable and user-friendly
-2
+
 Original data (that has been provided to you as a nested dictionary above):
 6 users have rated 8 different movies on a scale of 1 to 10.
 User-User similarities based on manhattan distances (that you will need to write code for):
 The highlighted cells indicate the “nearest neighbor” (user with the smallest manhattan distance) for each
 user. For instance, Bill’s nearest neighbor is Cathy (since she has the smallest manhattan distance from Bill
 along that row).
+
+
 Final recommendations for each user (that you will need to write code for):
 Recommendations are based on those movies that each user’s nearest neighbor has rated, and that the
 user has not rated. For instance, Bill’s nearest neighbor is Cathy. Recommendations for Bill therefore
