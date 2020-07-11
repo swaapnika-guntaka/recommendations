@@ -11,26 +11,32 @@ def calculate_manhattan_distance(user_scores):
                     if movie in user_scores[yuser]:
                         distance += abs(user_scores[xuser][movie] - user_scores[yuser][movie])
                 score_dict[xuser][yuser] = distance
+    print(score_dict)
     return score_dict
 
 
 def get_nearest_neighbor(user_scores):
     similar_users = {}
+
     score_dict = calculate_manhattan_distance(user_scores)
     for user in score_dict:
-        for neighbor, distance in score_dict[user].items():
-            nearest_neighbor = neighbor
-            if neighbor != user:
-                if score_dict[user][neighbor] < score_dict[user][nearest_neighbor]:
-                    nearest_neighbor = neighbor
-            similar_users[user] = nearest_neighbor
+        nearest_neighbor = ''
+        min = 1000
+        for neighbor, score in score_dict[user].items():
+            if score < min :
+                min = score
+                nearest_neighbor = neighbor
+        similar_users[user] = nearest_neighbor
     return similar_users
 
 def get_recommendations(user_scores):
     recommendations = {}
     similar_users = get_nearest_neighbor(user_scores)
     for user in similar_users:
-        recommendations[user] = user_scores[user]
+        recommendations[user] = []
+        for movie in user_scores[similar_users[user]]:
+            if movie not in list(user_scores[user].keys()) :
+                recommendations[user].append((movie, user_scores[similar_users[user]][movie]))
     return recommendations
 
 
