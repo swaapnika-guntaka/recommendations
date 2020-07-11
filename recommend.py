@@ -42,7 +42,6 @@ def main():
                           'Dave': {'Braveheart': 5, 'Rebecca': 7, 'Spellbound': 4},
                           'Ernie': {'Apocalypto': 3, 'Braveheart': 8, 'Rebecca': 1, 'Star Trek': 7},
                           'Fiona': {'The Ice Storm': 3, 'Family Plot': 10, 'Rebecca': 6, 'Spellbound': 10}}
-
     print(get_recommendations(user_movie_ratings))
 
 
